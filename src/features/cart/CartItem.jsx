@@ -1,5 +1,6 @@
 import { formatCurrency } from "../../../../__startup_code/16-fast-react-pizza/final-1-after-tailwind/src/utils/helpers";
-import Button from "../../ui/Button";
+import DeleteItemCart from "./DeleteItemCart";
+import UpdateItemQuantity from "./UpdateItemQuantity";
 
 function CartItem({ item }) {
   const { pizzaId, name, quantity, totalPrice } = item;
@@ -11,7 +12,8 @@ function CartItem({ item }) {
       </p>
       <div className="flex items-center justify-between sm:gap-6">
         <p className="text-sm font-bold">{formatCurrency(totalPrice)}</p>
-        <Button type="small">Delete</Button>
+        <UpdateItemQuantity pizzaId={pizzaId} />
+        <DeleteItemCart pizzaId={pizzaId} />
       </div>
     </li>
   );
