@@ -111,7 +111,7 @@ function CreateOrder() {
           <input
             type="hidder"
             name="position"
-            value={
+            defaultValue={
               position.logitude && position.latitude
                 ? `${position.longitude},${position.latitude}`
                 : ""
@@ -140,7 +140,6 @@ export async function action({ request }) {
 
     if (!order.customer || !order.phone || !order.address)
       throw new Error("please enter your all required information");
-    console.log(data.phone);
     if (!isValidPhone(data.phone))
       throw new Error(
         "Please give us your correct phone number. We might need it to contacct you.",
