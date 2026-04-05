@@ -1,4 +1,4 @@
-import { formatCurrency } from "../../../../__startup_code/16-fast-react-pizza/final-1-after-tailwind/src/utils/helpers";
+import { formatCurrency } from "../../utils/helpers";
 import DeleteItemCart from "./DeleteItemCart";
 import UpdateItemQuantity from "./UpdateItemQuantity";
 
